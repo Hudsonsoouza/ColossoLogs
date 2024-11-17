@@ -1,0 +1,30 @@
+{
+    "name": "discord-voice-log-bot",
+    "version": "1.0.0",
+    "description": "tuturuu",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/yourusername/discord-voice-log-bot.git"
+    },
+    "keywords": [
+      "discord",
+      "bot",
+      "voice",
+      "logs"
+    ],
+    "author": "Seu Nome",
+    "license": "MIT",
+    "dependencies": {
+      "discord.js": "^14.6.0",
+      "dotenv": "^16.0.3",
+      "gamedig": "^3.0.0"
+    },
+    "engines": {
+      "node": ">=20.17.0"
+    }
+  }
+  
