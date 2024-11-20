@@ -64,17 +64,27 @@ const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
 })();
 
 client.on('interactionCreate', async interaction => {
-    if (!interaction.isChatInputCommand()) return;
+    if (interaction.isChatInputCommand()) {
+        const command = client.commands.get(interaction.commandName);
 
-    const command = client.commands.get(interaction.commandName);
+        if (!command) return;
 
-    if (!command) return;
-
-    try {
-        await command.execute(interaction);
-    } catch (error) {
-        console.error(error);
-        await interaction.reply({ content: 'Houve um erro ao executar este comando!', ephemeral: true });
+        try {
+            await command.execute(interaction);
+        } catch (error) {
+            console.error(error);
+            await interaction.reply({ content: 'Houve um erro ao executar este comando!', ephemeral: true });
+        }
+    } else if (interaction.isModalSubmit()) {
+        const command = client.commands.get('embed');
+        if (command && command.modalSubmit) {
+            try {
+                await command.modalSubmit(interaction);
+            } catch (error) {
+                console.error(error);
+                await interaction.reply({ content: 'Erro ao processar o modal.', ephemeral: true });
+            }
+        }
     }
 });
 

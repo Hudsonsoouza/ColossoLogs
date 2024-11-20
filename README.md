@@ -24,6 +24,7 @@ Edite o arquivo .env na raiz do projeto e adicione as seguintes variáveis:<br>
    CHANNEL_LOGS=IDCANALDELOGS<br>
    CHANNEL_WELCOME=IDCANALDEBOASVINDAS<br>
    ID_BOT=IDDOBOT<br>
+   ADMIN_ROLE_ID=IDCARGOPERMEMBED<br>
 
 Substitua pelos valores apropriados.
 </p>
@@ -31,9 +32,10 @@ Substitua pelos valores apropriados.
 <h2>Estrutura do Projeto</h2>
 
 <p>
-colossologs/
+colossologs/<br>
 ├── commands/<br>
 │   ├── status.js<br>
+│   ├── embed.js<br>
 ├── events/<br>
 │   ├── channelCreate.js<br>
 │   ├── channelDelete.js<br>
@@ -49,6 +51,7 @@ colossologs/
 <h3>Comandos</h3>
 
 <p>/status: Exibe o status atual do bot, incluindo ping, uptime, versão do Node.js e versão do discord.js.</p>
+<p>/embed: Abre um modal para envio de mensagem em forma de embed.</p>
 
 <h3>Eventos</h3>
 

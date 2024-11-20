@@ -1,5 +1,5 @@
 {
-    "name": "discord-voice-log-bot",
+    "name": "ColossoLogs",
     "version": "1.0.0",
     "description": "tuturuu",
     "main": "index.js",
@@ -8,7 +8,7 @@
     },
     "repository": {
       "type": "git",
-      "url": "https://github.com/yourusername/discord-voice-log-bot.git"
+      "url": "https://github.com/Hudsonsoouza/ColossoLogs.git"
     },
     "keywords": [
       "discord",
@@ -16,7 +16,7 @@
       "voice",
       "logs"
     ],
-    "author": "Seu Nome",
+    "author": "Own3d",
     "license": "MIT",
     "dependencies": {
       "discord.js": "^14.6.0",
